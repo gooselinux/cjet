@@ -1,0 +1,36 @@
+This is to ensure that the package builds with flags and compiler
+specified by the build system.
+
+* Fri Aug 3 2007 Lubomir Kundrak <lkundrak@redhat.com>
+Corrected this #249974, thanks to Ville Skytt√
+
+diff -urp cjet089.orig/Makefile cjet089/Makefile
+--- cjet089.orig/Makefile	1996-02-19 22:51:33.000000000 +0100
++++ cjet089/Makefile	2007-08-03 09:47:01.000000000 +0200
+@@ -4,19 +4,19 @@
+ # Makefile for UNIX systems
+ # 
+ 
+-# compiler, compiler and linker options 
+-CC	  = gcc
+-OPT	  = -O2 -Wall
+-LINKOPT   = -s
++## compiler, compiler and linker options 
++#CC	  = gcc
++#OPT	  = -O2 -Wall
++#LINKOPT   = -s
+ 
+ # you should not need to change anything below
+ 
+-SHELL     = /bin/sh
++#SHELL     = /bin/sh
+ 
+ EXECNAME  = cjet
+ 
+-CFLAGS	  = $(OPT)
+-LDFLAGS   = $(LINKOPT)
++#CFLAGS	  = $(OPT)
++#LDFLAGS   = $(LINKOPT)
+ 
+ OBJ = main.o parse.o function.o raster.o fonts.o misc.o symbol.o\
+       page.o pjl.o macro.o io.o
